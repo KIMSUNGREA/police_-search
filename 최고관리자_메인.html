@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<title>실종수색 상황관리 시스템 관리자</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<link rel="stylesheet" type="text/css" href="css/swiper.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="wrap">
+			<!-- header -->
+			<header class="common_header">
+				<h1>
+					<a href="javascript:;">실종수색 상황관리 시스템 관리자</a>
+				</h1>
+				<nav>
+					<ul>
+						<li><a href="최고관리자_메인.html">전체 통계</a></li>
+						<li>
+							<a href="실종수색현황.html">실종수색 현황</a>
+							<ul>
+								<li><a href="실종수색현황.html">수색 진행상황</a></li>
+								<li><a href="일반수색자 관리.html">일반 수색자 관리</a></li>
+								<li><a href="실종사건정보.html">실종 사건 정보</a></li>
+								<li><a href="보고사항 관리_상세.html">보고사항 관리<br>(해당사건)</a></li>
+							</ul>
+						</li>
+						<li><a href="실종수색 등록.html">실종 수색 등록</a></li>
+						<li><a href="javascript:;">관리자 관리</a></li>
+						<li>
+							<a href="javascript:;">게시판 관리</a>
+							<ul>
+								<li><a href="공지사항.html">공지사항</a></li>
+								<li><a href="javascript:;">전체 보고사항</a></li>
+								<li><a href="Q&A.html">Q&A</a></li>
+								<li><a href="자주하는 질문.html">자주묻는질문</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:;">로그 관리</a></li>
+						<li><a href="javascript:;">로그인 정책 관리</a></li>
+					</ul>
+				</nav>
+				<div class="util_menu_wrap">
+					<div class="login_timer">
+						<p><span>28</span>분 <span>30</span>초</p>
+						<a href="javascript:;">연장</a>
+					</div>
+					<ul class="util_menus">
+						<li>
+							<a href="javascript:;">마이페이지</a>
+							<ul>
+								<li><a href="개인정보수정.html">개인정보수정</a></li>
+								<li><a href="1대1 문의.html">1:1문의</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="nav_bg"></div>
+				<button class="mob_gnb_open" type="button">메뉴</button>
+			</header>
+			<!-- header end -->
+			<!-- 모바일 헤더 -->
+			<header class="mob_header">
+				<a class="btn_mob_prev" href="javascript:;">이전</a>
+				<strong>전체 통계</strong>
+				<button class="mob_gnb_open" type="button">메뉴</button>
+			</header>
+			<!-- 모바일 헤더 end -->
+			<!-- 모바일 메뉴 -->
+			<div class="mob_gnb_dimm"></div>
+			<div class="mob_gnb_wrap">
+				<div class="mob_gnb_bg"></div>
+				<div class="mob_gnb">
+					<a class="mob_gnb_close" href="javascript:;">메뉴 닫기</a>
+					<div class="mob_gnb_uinfo">
+						<figure><img alt="" src="img/m/admin_pic.jpg"></figure>
+						<strong>강포돌</strong>
+						<p><span>최고관리자</span><span>서대문경찰청</span></p>
+					</div>
+					<ul>
+						<li><a href="javascript:;">전체 통계</a></li>
+						<li>
+							<a class="has_sub" href="javascript:;">실종수색 현황</a>
+							<div class="gnb_submenu">
+								<ul class="half">
+									<li><a href="javascript:;">수색 진행상황</a></li>
+									<li><a href="javascript:;">수색 범위 설정</a></li>
+									<li>
+										<a href="javascript:;">수색팀 관리</a>
+										<ul>
+											<li><a href="javascript:;">수색 신청 관리</a></li>
+											<li><a href="javascript:;">일반 수색자 관리</a></li>
+											<li><a href="javascript:;">임시 수색자 관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="half">
+									<li><a href="javascript:;">실종 사건 정보</a></li>
+									<li><a href="javascript:;">보고사항 관리</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="has_sub" href="javascript:;">실종수색사건 관리</a>
+							<div class="gnb_submenu">
+								<ul>
+									<li><a href="javascript:;">실종 수색 등록</a></li>
+									<li><a href="javascript:;">실종 수색 관리</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:;">관리자 관리</a></li>
+						<li>
+							<a class="has_sub" href="javascript:;">게시판 관리</a>
+							<div class="gnb_submenu">
+								<ul>
+									<li><a href="javascript:;">공지사항</a></li>
+									<li><a href="javascript:;">전체 보고사항</a></li>
+									<li><a href="javascript:;">Q&A</a></li>
+									<li><a href="javascript:;">자주묻는질문</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<p class="btn_to_srchmap">
+						<a href="javascript:;">수색화면으로</a>
+					</p>
+				</div>
+			</div>
+			<!-- 모바일 메뉴 end -->
+			<!-- content -->
+			<div class="cont_wrap">
+				<!-- lnb -->
+				<div class="lnb_wrap">
+					<div class="lnb_user_info">
+						<figure><img alt="" src="img/admin_pic.jpg"></figure>
+						<strong>강민석</strong>
+						<p><span>최고관리자</span><span>경찰청</span></p>
+					</div>
+					<div class="lnb_bg"></div>
+				</div>
+				<!-- lnb end -->
+				<div class="cont_inner">
+					<div class="dashboard_wrap">
+						<dl class="dashboard_each">
+							<dt>전체 실종수색</dt>
+							<dd><strong>4,000</strong>건</dd>
+						</dl>
+						<dl class="dashboard_each">
+							<dt>진행 중 실종수색</dt>
+							<dd><strong>250</strong>건</dd>
+						</dl>
+						<dl class="dashboard_each">
+							<dt>해결된 실종수색</dt>
+							<dd><strong>3,500</strong>건</dd>
+						</dl>
+						<dl class="dashboard_each">
+							<dt>미해결 실종수색</dt>
+							<dd><strong>250</strong>건</dd>
+						</dl>
+					</div>
+					<div class="total_stats_wrap">
+						<strong class="total_stats_ttl"><a href="javascript:;">전체 실종수색 현황</a></strong>
+						<div class="total_stats_inner">
+							<dl>
+								<dt>
+									<strong>가양역 강익명 실종 수색</strong>
+								</dt>
+								<dd>
+									<div class="each_stat_detail">
+										<dl>
+											<dt>수색 인원</dt>
+											<dd><strong>150</strong>명</dd>
+										</dl>
+										<dl>
+											<dt>보고사항</dt>
+											<dd><strong>20</strong>건</dd>
+										</dl>
+									</div>
+									<div class="each_stat_graph">
+										<div class="graph_wrap">
+											<div class="graph_bar" style="width:60%;"></div>
+										</div>
+										<p>
+											진행률: <strong>60%</strong>
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<strong>군자역 김익명 실종 수색</strong>
+								</dt>
+								<dd>
+									<div class="each_stat_detail">
+										<dl>
+											<dt>수색 인원</dt>
+											<dd><strong>100</strong>명</dd>
+										</dl>
+										<dl>
+											<dt>보고사항</dt>
+											<dd><strong>18</strong>건</dd>
+										</dl>
+									</div>
+									<div class="each_stat_graph">
+										<div class="graph_wrap">
+											<div class="graph_bar" style="width:65%;"></div>
+										</div>
+										<p>
+											진행률: <strong>65%</strong>
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<strong>제주도 일가족 실종 수색</strong>
+								</dt>
+								<dd>
+									<div class="each_stat_detail">
+										<dl>
+											<dt>수색 인원</dt>
+											<dd><strong>200</strong>명</dd>
+										</dl>
+										<dl>
+											<dt>보고사항</dt>
+											<dd><strong>22</strong>건</dd>
+										</dl>
+									</div>
+									<div class="each_stat_graph">
+										<div class="graph_wrap">
+											<div class="graph_bar" style="width:30%;"></div>
+										</div>
+										<p>
+											진행률: <strong>30%</strong>
+										</p>
+									</div>
+								</dd>
+							</dl>
+							<dl>
+								<dt>
+									<strong>의정부 김철수 실종 수색</strong>
+								</dt>
+								<dd>
+									<div class="each_stat_detail">
+										<dl>
+											<dt>수색 인원</dt>
+											<dd><strong>50</strong>명</dd>
+										</dl>
+										<dl>
+											<dt>보고사항</dt>
+											<dd><strong>10</strong>건</dd>
+										</dl>
+									</div>
+									<div class="each_stat_graph">
+										<div class="graph_wrap">
+											<div class="graph_bar" style="width:80%;"></div>
+										</div>
+										<p>
+											진행률: <strong>80%</strong>
+										</p>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</div>
+					<div class="main_board_wrap">
+						<div class="main_board_each left">
+							<strong><a href="javascript:;">공지사항</a></strong>
+							<ul>
+								<li>
+									<a href="javascript:;">임시사용자 승인 오류 처리</a>
+									<span>2분 전</span>
+								</li>
+								<li>
+									<a href="javascript:;">관리자 등록 주의사항</a>
+									<span>2022.09.20</span>
+								</li>
+								<li>
+									<a href="javascript:;">서버 임시 점검 안내</a>
+									<span>2022.09.19</span>
+								</li>
+								<li>
+									<a href="javascript:;">서버 임시 점검 안내</a>
+									<span>2022.09.10</span>
+								</li>
+							</ul>
+						</div>
+						<div class="main_board_each right">
+							<strong><a href="javascript:;">전체 보고사항</a></strong>
+							<ul>
+								<li>
+									<a href="javascript:;">수색 불가지역입니다. 조치 부탁드립니다.</a>
+									<span>2분 전</span>
+								</li>
+								<li>
+									<a href="javascript:;">실종자 소유 추정되는 물품 발견</a>
+									<span>30분 전</span>
+								</li>
+								<li>
+									<a href="javascript:;">휴대폰(아이폰12 실버)발견</a>
+									<span>50분 전</span>
+								</li>
+								<li>
+									<a href="javascript:;">휴대폰(아이폰12 실버)발견</a>
+									<span>3시간 전</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- content end -->
+		</div>
+
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+
+		<script></script>
+	</body>
+</html>

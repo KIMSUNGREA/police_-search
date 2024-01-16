@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<title>실종수색 상황관리 시스템 관리자</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css">
+
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+	</head>
+
+	<body>
+		<div id="wrap">
+			<!-- header -->
+			<header class="common_header">
+				<h1>
+					<a href="javascript:;">실종수색 상황관리 시스템 관리자</a>
+				</h1>
+				<nav>
+					<ul>
+						<li><a href="최고관리자_메인.html">전체 통계</a></li>
+						<li>
+							<a href="실종수색현황.html">실종수색 현황</a>
+							<ul>
+								<li><a href="실종수색현황.html">수색 진행상황</a></li>
+								<li><a href="일반수색자 관리.html">일반 수색자 관리</a></li>
+								<li><a href="실종사건정보.html">실종 사건 정보</a></li>
+								<li><a href="보고사항 관리_상세.html">보고사항 관리<br>(해당사건)</a></li>
+							</ul>
+						</li>
+						<li><a href="실종수색 등록.html">실종 수색 등록</a></li>
+						<li><a href="javascript:;">관리자 관리</a></li>
+						<li>
+							<a href="javascript:;">게시판 관리</a>
+							<ul>
+								<li><a href="공지사항.html">공지사항</a></li>
+								<li><a href="javascript:;">전체 보고사항</a></li>
+								<li><a href="Q&A.html">Q&A</a></li>
+								<li><a href="자주하는 질문.html">자주묻는질문</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:;">로그 관리</a></li>
+						<li><a href="javascript:;">로그인 정책 관리</a></li>
+					</ul>
+				</nav>
+				<div class="util_menu_wrap">
+					<div class="login_timer">
+						<p><span>28</span>분 <span>30</span>초</p>
+						<a href="javascript:;">연장</a>
+					</div>
+					<ul class="util_menus">
+						<li>
+							<a href="javascript:;">마이페이지</a>
+							<ul>
+								<li><a href="개인정보수정.html">개인정보수정</a></li>
+								<li><a href="1대1 문의.html">1:1문의</a></li>
+							</ul>
+						</li>
+						<li><a href="javascript:;">로그아웃</a></li>
+					</ul>
+				</div>
+				<div class="nav_bg"></div>
+				<button class="mob_gnb_open" type="button">메뉴</button>
+			</header>
+			<!-- header end -->
+			<!-- 모바일 헤더 -->
+			<header class="mob_header">
+				<a class="btn_mob_prev" href="javascript:;">이전</a>
+				<strong>보고사항 관리</strong>
+				<button class="mob_gnb_open" type="button">메뉴</button>
+			</header>
+			<!-- 모바일 헤더 end -->
+			<!-- 모바일 메뉴 -->
+			<div class="mob_gnb_dimm"></div>
+			<div class="mob_gnb_wrap">
+				<div class="mob_gnb_bg"></div>
+				<div class="mob_gnb">
+					<a class="mob_gnb_close" href="javascript:;">메뉴 닫기</a>
+					<div class="mob_gnb_uinfo">
+						<figure><img alt="" src="img/m/admin_pic.jpg"></figure>
+						<strong>강포돌</strong>
+						<p><span>최고관리자</span><span>서대문경찰청</span></p>
+					</div>
+					<ul>
+						<li><a href="javascript:;">전체 통계</a></li>
+						<li>
+							<a class="has_sub" href="javascript:;">실종수색 현황</a>
+							<div class="gnb_submenu">
+								<ul class="half">
+									<li><a href="javascript:;">수색 진행상황</a></li>
+									<li><a href="javascript:;">수색 범위 설정</a></li>
+									<li>
+										<a href="javascript:;">수색팀 관리</a>
+										<ul>
+											<li><a href="javascript:;">수색 신청 관리</a></li>
+											<li><a href="javascript:;">일반 수색자 관리</a></li>
+											<li><a href="javascript:;">임시 수색자 관리</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="half">
+									<li><a href="javascript:;">실종 사건 정보</a></li>
+									<li><a href="javascript:;">보고사항 관리</a></li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<a class="has_sub" href="javascript:;">실종수색사건 관리</a>
+							<div class="gnb_submenu">
+								<ul>
+									<li><a href="javascript:;">실종 수색 등록</a></li>
+									<li><a href="javascript:;">실종 수색 관리</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:;">관리자 관리</a></li>
+						<li>
+							<a class="has_sub" href="javascript:;">게시판 관리</a>
+							<div class="gnb_submenu">
+								<ul>
+									<li><a href="javascript:;">공지사항</a></li>
+									<li><a href="javascript:;">전체 보고사항</a></li>
+									<li><a href="javascript:;">Q&A</a></li>
+									<li><a href="javascript:;">자주묻는질문</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<p class="btn_to_srchmap">
+						<a href="javascript:;">수색화면으로</a>
+					</p>
+				</div>
+			</div>
+			<!-- 모바일 메뉴 end -->
+			<!-- content -->
+			<div class="cont_wrap">
+				<!-- lnb -->
+				<div class="lnb_wrap">
+					<div class="lnb_user_info">
+						<figure><img alt="" src="img/admin_pic.jpg"></figure>
+						<strong>강민석</strong>
+						<p><span>최고관리자</span><span>경찰청</span></p>
+					</div>
+					<nav>
+						<strong class="lnb_nav_ttl">가양역 강익명 실종 수색</strong>
+						<ul>
+							<li><a href="javascript:;">수색 진행상황</a></li>
+							<li><a href="javascript:;">실종사건 정보</a></li>
+							<li class="has_sub">
+								<a href="javascript:;">수색팀 관리</a>
+								<ul>
+									<li><a href="javascript:;">- 수색 신청 관리</a></li>
+									<li><a href="javascript:;">- 일반수색자 관리</a></li>
+									<li><a href="javascript:;">- 임시사용자 관리</a></li>
+								</ul>
+							</li>
+							<li><a class="on" href="javascript:;">보고사항 관리</a></li>
+						</ul>
+					</nav>
+					<div class="lnb_bg"></div>
+				</div>
+				<!-- lnb end -->
+				<div class="cont_inner">
+					<div class="srch_ttl_wrap">
+						<strong>보고사항 관리</strong>
+						<fieldset class="two_sel">
+							<select>
+								<option>분류</option>
+								<option>대상자 발견</option>
+								<option>수색불가지역</option>
+								<option>수색불가능 상황</option>
+								<option>기타</option>
+							</select>
+							<select>
+								<option>전체</option>
+								<option>내용</option>
+								<option>사건명</option>
+								<option>보고자</option>
+							</select>
+							<div class="srch_box_wrap">
+								<input id="" name="" placeholder="검색어를 입력해주세요." type="text">
+								<a href="javascript:;">검색</a>
+							</div>
+						</fieldset>
+					</div>
+					<!-- PC 테이블 -->
+					<div class="tbl_wrap">
+						<div class="tbl_top_btns">
+							<select class="tbl_top_sel">
+								<option>전체</option>
+								<option>미처리</option>
+								<option>처리완료</option>
+							</select>
+						</div>
+						<table>
+							<colgroup>
+								<col style="width:10%;">
+								<col style="width:10%;">
+								<col style="width:34%;">
+								<col style="width:13%;">
+								<col style="width:9%;">
+								<col style="width:9%;">
+								<col style="width:15%;">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No.</th>
+									<th>분류</th>
+									<th>제목</th>
+									<th>사건명</th>
+									<th>보고자</th>
+									<th>날짜</th>
+									<th>신청</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10</td>
+									<td class="srchr_name">수색불가지역</td>
+									<td class="srchr_name"><a href="javascript:;">수색 불가지역입니다. 조치 부탁드립니다.</a></td>
+									<td>가양역 강익명 실종수색</td>
+									<td>이민철</td>
+									<td>1분 전</td>
+									<td><a class="btn_stat stand">미처리</a></td>
+								</tr>
+								<tr>
+									<td>9</td>
+									<td class="srchr_name">기타</td>
+									<td class="srchr_name"><a href="javascript:;">실종자 소유 추정되는 물품 발견</a></td>
+									<td>군자역 김익명 실종수색</td>
+									<td>강대수</td>
+									<td>5분 전</td>
+									<td><a class="btn_stat stand">미처리</a></td>
+								</tr>
+								<tr>
+									<td>8</td>
+									<td class="srchr_name">수색불가능상황</td>
+									<td class="srchr_name"><a href="javascript:;">수색이 불가능합니다.</a></td>
+									<td>가양역 강익명 실종수색</td>
+									<td>김철수</td>
+									<td>17분 전</td>
+									<td><a class="btn_stat stand">미처리</a></td>
+								</tr>
+								<tr>
+									<td>7</td>
+									<td class="srchr_name">대상자발견</td>
+									<td class="srchr_name"><a href="javascript:;">실종자 발견했습니다.</a></td>
+									<td>가양역 강익명 실종수색</td>
+									<td>김영희</td>
+									<td>20분 전</td>
+									<td><a class="btn_stat parti">처리완료</a></td>
+								</tr>
+								<tr>
+									<td>6</td>
+									<td class="srchr_name">수색불가지역</td>
+									<td class="srchr_name"><a href="javascript:;">수색 불가지역입니다. 조치 부탁드립니다.</a></td>
+									<td>가양역 강익명 실종수색</td>
+									<td>이민철</td>
+									<td>1분 전</td>
+									<td><a class="btn_stat stand">미처리</a></td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td class="srchr_name">기타</td>
+									<td class="srchr_name"><a href="javascript:;">실종자 소유 추정되는 물품 발견</a></td>
+									<td>군자역 김익명 실종수색</td>
+									<td>강대수</td>
+									<td>5분 전</td>
+									<td><a class="btn_stat stand">미처리</a></td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td class="srchr_name">수색불가능상황</td>
+									<td class="srchr_name"><a href="javascript:;">수색이 불가능합니다.</a></td>
+									<td>가양역 강익명 실종수색</td>
+									<td>김철수</td>
+									<td>17분 전</td>
+									<td><a class="btn_stat stand">미처리</a></td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td class="srchr_name">대상자발견</td>
+									<td class="srchr_name"><a href="javascript:;">실종자 발견했습니다.</a></td>
+									<td>가양역 강익명 실종수색</td>
+									<td>김영희</td>
+									<td>20분 전</td>
+									<td><a class="btn_stat parti">처리완료</a></td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td class="srchr_name">수색불가능상황</td>
+									<td class="srchr_name"><a href="javascript:;">수색이 불가능합니다.</a></td>
+									<td>가양역 강익명 실종수색</td>
+									<td>김철수</td>
+									<td>17분 전</td>
+									<td><a class="btn_stat stand">미처리</a></td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td class="srchr_name">대상자발견</td>
+									<td class="srchr_name"><a href="javascript:;">실종자 발견했습니다.</a></td>
+									<td>가양역 강익명 실종수색</td>
+									<td>김영희</td>
+									<td>20분 전</td>
+									<td><a class="btn_stat parti">처리완료</a></td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="tbl_pager">
+							<p class="btn_prev"><a href="javascript:;">이전</a></p>
+							<ul>
+								<li><a class="on" href="javascript:;">1</a></li>
+								<li><a href="javascript:;">2</a></li>
+								<li><a href="javascript:;">3</a></li>
+								<li><a href="javascript:;">4</a></li>
+								<li><a href="javascript:;">5</a></li>
+								<li><a href="javascript:;">6</a></li>
+								<li><a href="javascript:;">7</a></li>
+								<li><a href="javascript:;">8</a></li>
+								<li><a href="javascript:;">9</a></li>
+								<li><a href="javascript:;">10</a></li>
+							</ul>
+							<p class="btn_next"><a href="javascript:;">다음</a></p>
+						</div>
+					</div>
+					<!-- mobile 테이블 -->
+					<div class="mob_tbl_wrap">
+						<div class="mob_tbl_list report_mng">
+							<ul>
+								<li>
+									<a href="javascript:;">
+										<p class="srch_write_info">
+											<span class="stat not_dome">미처리</span>
+											<span>수색불가지역</span>
+											<span>1분전</span>
+											<span>김민철</span>
+										</p>
+										<strong>가양역강익명실종수색</strong>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<p class="srch_write_info">
+											<span class="stat not_dome">미처리</span>
+											<span>수색불가지역</span>
+											<span>1분전</span>
+											<span>김민철</span>
+										</p>
+										<strong>가양역강익명실종수색</strong>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<p class="srch_write_info">
+											<span class="stat not_dome">미처리</span>
+											<span>수색불가지역</span>
+											<span>1분전</span>
+											<span>김민철</span>
+										</p>
+										<strong>가양역강익명실종수색</strong>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<p class="srch_write_info">
+											<span class="stat dome">처리완료</span>
+											<span>수색불가지역</span>
+											<span>1분전</span>
+											<span>김민철</span>
+										</p>
+										<strong>가양역강익명실종수색</strong>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<p class="srch_write_info">
+											<span class="stat dome">처리완료</span>
+											<span>수색불가지역</span>
+											<span>1분전</span>
+											<span>김민철</span>
+										</p>
+										<strong>가양역강익명실종수색</strong>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<a class="btn_list_more" href="javascript:;">더보기<img alt="" src="img/m/icon_plus.png"></a>
+					</div>
+				</div>
+			</div>
+			<!-- content end -->
+		</div>
+
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+
+		<script></script>
+	</body>
+</html>
